@@ -10,17 +10,17 @@ import org.apache.spark.api.java.JavaSparkContext;
 public class App {
 	public static void main(String[] args) {
 
-		System.out.println("Hello World");
-		// SparkConf conf = new SparkConf().setAppName("AWS EMR Demo");
-		// JavaSparkContext sc = new JavaSparkContext(conf);
+		// System.out.println("Hello World");
+		SparkConf conf = new SparkConf().setAppName("AWS EMR Demo");
+		JavaSparkContext sc = new JavaSparkContext(conf);
 
-		// List<String> strings = Arrays.asList("Hello", "World");
-		// JavaRDD<String> s1 = sc.parallelize(strings);
-		// List<String> s = s1.collect();
-		//
-		// for (String ss : s) {
+		List<String> strings = Arrays.asList("Hello", "World");
+		JavaRDD<String> s1 = sc.parallelize(strings);
+		List<String> s = s1.collect();
 
-		// }
+		for (String ss : s) {
+
+		}
 
 	}
 }
