@@ -14,6 +14,10 @@ public class App {
 
 		List<Integer> data = Arrays.asList(1, 2, 3, 4, 5);
 		JavaRDD<Integer> distData = sc.parallelize(data);
-		distData.count();
+		List<Integer> s = distData.collect();
+		for (Integer i : s) {
+			System.out.println(i);
+
+		}
 	}
 }
